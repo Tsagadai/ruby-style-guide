@@ -208,10 +208,14 @@ You can generate a PDF or an HTML copy of this guide using
     end
     ```
 
-* Use RDoc and its conventions for API documentation.  Don't put an
-  empty line between the comment block and the `def`.
+* Use [Rdoc](https://github.com/rdoc/rdoc) and its conventions for API
+  documentation.  Don't put an empty line between the comment block and the `def`.
 * Keep lines fewer than 80 characters.
-* Avoid trailing whitespace.
+* Avoid trailing whitespace. Occasionally, some generators add in trailing
+  whitespace or you just get lazy. If that happens, run this Bash script to
+  correct it:
+  
+    find . -name "*.rb" -o -name "*.haml" -o -name "*.yml" -type f -exec sed -i 's/\s*$//' {} \;
 
 ## Syntax
 
@@ -730,7 +734,13 @@ you if you forget either of the rules above!
 > it even clearer. <br/>
 > -- Steve McConnell
 
-* Write self-documenting code and ignore the rest of this section. Seriously!
+* Write clean, self-documenting code. However, each class and method should
+  be sufficiently described thoroughly enough for someone to understand what it
+  is for. Anything more complex than simple needs a comment. Future you and
+  your fellow developers need to understand your code, help them by being as
+  clear as possible and removing or explaining all complexity.
+* Document every class. If you can't think of 5 words to say about a class,
+  you probably don't need it.
 * Comments longer than a word are capitalized and use punctuation. Use [one
   space](http://en.wikipedia.org/wiki/Sentence_spacing) after periods.
 * Avoid superfluous comments.
