@@ -215,6 +215,15 @@ Translations of the guide are available in the following languages:
   class FooError < StandardError; end
   ```
 
+* Use [Rdoc](https://github.com/rdoc/rdoc) and its conventions for API
+  documentation.  Don't put an empty line between the comment block and the `def`.
+* Keep lines fewer than 80 characters.
+* Avoid trailing whitespace. Occasionally, some generators add in trailing
+  whitespace or you just get lazy. If that happens, run this Bash script to
+  correct it:
+  
+    find . -name "*.rb" -o -name "*.haml" -o -name "*.yml" -type f -exec sed -i 's/\s*$//' {} \;
+
   The only exception, regarding operators, is the exponent operator:
 
   ```Ruby
@@ -573,7 +582,6 @@ Translations of the guide are available in the following languages:
   num = 1_000_000
   ```
 
-<<<<<<< HEAD
 * Use RDoc and its conventions for API documentation.  Don't put an
   empty line between the comment block and the `def`.
 * Keep lines fewer than 80 characters.
@@ -582,12 +590,11 @@ Translations of the guide are available in the following languages:
   correct it:
   
     find . -name "*.rb" -o -name "*.haml" -o -name "*.yml" -type f -exec sed -i 's/\s*$//' {} \;
-=======
+
 * <a name="rdoc-conventions"></a>
     Use RDoc and its conventions for API documentation.  Don't put an
     empty line between the comment block and the `def`.
 <sup>[[link](#rdoc-conventions)]</sup>
->>>>>>> [Fix #319] Add anchors to rule bullets
 
 * <a name="80-character-limits"></a>
   Limit lines to 80 characters.
@@ -1957,8 +1964,6 @@ condition](#safe-assignment-in-condition).
 > comment isn't needed?" Improve the code and then document it to make
 > it even clearer. <br/>
 > -- Steve McConnell
-
-<<<<<<< HEAD
 * Write clean, self-documenting code. However, each class and method should
   be sufficiently described thoroughly enough for someone to understand what it
   is for. Anything more complex than simple needs a comment. Future you and
@@ -1966,12 +1971,16 @@ condition](#safe-assignment-in-condition).
   clear as possible and removing or explaining all complexity.
 * Document every class. If you can't think of 5 words to say about a class,
   you probably don't need it.
-* Write self-documenting code and ignore the rest of this section. Seriously!
-=======
-* <a name="no-comments"></a>
-  Write self-documenting code and ignore the rest of this section. Seriously!
-<sup>[[link](#no-comments)]</sup>
->>>>>>> [Fix #319] Add anchors to rule bullets
+* Write clean, self-documenting code. However, each class and method should
+  be sufficiently described thoroughly enough for someone to understand what it
+  is for. Anything more complex than simple needs a comment. Future you and
+  your fellow developers need to understand your code, help them by being as
+  clear as possible and removing or explaining all complexity.
+* Document every class. If you can't think of 5 words to say about a class,
+  you probably don't need it.
+* Comments longer than a word are capitalized and use punctuation. Use [one
+  space](http://en.wikipedia.org/wiki/Sentence_spacing) after periods.
+* Avoid superfluous comments.
 
 * <a name="english-comments"></a>
   Write comments in English.
