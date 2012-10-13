@@ -531,6 +531,7 @@ You can generate a PDF or an HTML copy of this guide using
         end
       end
     end
+    ```
 
 * Use spaces around the `=` operator when assigning default values to method parameters:
 
@@ -963,6 +964,7 @@ in *Ruby* now, not in *Python*.
         # ...
       end
     end
+    ```
 
 * Use `def self.method` to define singleton methods. This makes the code
   easier to refactor since the class name is not repeated.
