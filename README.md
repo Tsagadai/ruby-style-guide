@@ -210,6 +210,18 @@ You can generate a PDF or an HTML copy of this guide using
 
 * Use [Rdoc](https://github.com/rdoc/rdoc) and its conventions for API
   documentation.  Don't put an empty line between the comment block and the `def`.
+* Add underscores to big numeric literals to improve their readability.
+
+    ```Ruby
+    # bad - how many 0s are there?
+    num = 1000000
+
+    # good - much easier to parse for the human brain
+    num = 1_000_000
+    ```
+
+* Use RDoc and its conventions for API documentation.  Don't put an
+  empty line between the comment block and the `def`.
 * Keep lines fewer than 80 characters.
 * Avoid trailing whitespace. Occasionally, some generators add in trailing
   whitespace or you just get lazy. If that happens, run this Bash script to
