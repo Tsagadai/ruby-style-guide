@@ -1101,7 +1101,7 @@ in *Ruby* now, not in *Python*.
     
 * Avoid using `rescue` in its modifier form.    
 
-    ```
+    ```Ruby
     # bad - this catches all StandardError exceptions
     do_something rescue nil
     ```
