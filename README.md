@@ -233,6 +233,8 @@ Translations of the guide are available in the following languages:
   correct it:
   
     find . -name "*.rb" -o -name "*.haml" -o -name "*.yml" -type f -exec sed -i 's/\s*$//' {} \;
+* Keep lines up to 80 characters.
+* Avoid trailing whitespace.
 
 ## Syntax
 
