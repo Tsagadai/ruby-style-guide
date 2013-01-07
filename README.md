@@ -752,7 +752,7 @@ you if you forget either of the rules above!
   Smalltalk and are not common in other programming languages. The
   reason the use of `select` is encouraged over `find_all` is that it
   goes together nicely with `reject` and its name is pretty self-explanatory.
-  
+
 * Use `flat_map` instead of `map` + `flatten`.
 
     ```Ruby
@@ -1003,7 +1003,7 @@ in *Ruby* now, not in *Python*.
       def private_method
         # ...
       end
-  
+
       def another_private_method
         # ...
       end
@@ -1041,8 +1041,9 @@ in *Ruby* now, not in *Python*.
 
 ## Exceptions
 
-* Signal exceptions using the `fail` keyword. Use `raise` only when
-  catching an exception and re-raising it (because here you're not failing, but explicitly and intentionally raising an exception).
+* Signal exceptions using the `fail` method. Use `raise` only when
+  catching an exception and re-raising it (because here you're not
+  failing, but explicitly and purposefully raising an exception).
 
     ```Ruby
     begin
@@ -1130,8 +1131,8 @@ in *Ruby* now, not in *Python*.
     # bad
     do_something rescue nil
     ```
-    
-* Avoid using `rescue` in its modifier form.    
+
+* Avoid using `rescue` in its modifier form.
 
     ```Ruby
     # bad - this catches all StandardError exceptions
@@ -1293,7 +1294,7 @@ strings.
     # bad - if we make a mistake we might not spot it right away
     heroes[:batman] # => "Bruce Wayne"
     heroes[:supermann] # => nil
-    
+
     # good - fetch raises a KeyError making the problem obvious
     heroes.fetch(:supermann)
     ```
