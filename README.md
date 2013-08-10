@@ -404,7 +404,8 @@ as easy to spot as regular comments.
 ## Syntax
 
 * Use `::` only to reference constants(this includes classes and
-modules). Never use `::` for method invocation.
+modules) and constructors (like `Array()` or `Nokogiri::HTML()`).
+Never use `::` for regular method invocation.
 
     ```Ruby
     # bad
@@ -415,6 +416,7 @@ modules). Never use `::` for method invocation.
     SomeClass.some_method
     some_object.some_method
     SomeModule::SomeClass::SOME_CONST
+    SomeModule::SomeClass()
     ```
 
 * Use `def` with parentheses when there are arguments. Omit the
