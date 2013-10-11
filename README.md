@@ -436,6 +436,25 @@ Translations of the guide are available in the following languages:
 * Use [Rdoc](https://github.com/rdoc/rdoc) and its conventions for API
   documentation.  Don't put an empty line between the comment block and the `def`.
 * Add underscores to big numeric literals to improve their readability.
+* Align the elements of array literals spanning multiple lines.
+
+    ```Ruby
+    # bad - single indent
+    menu_item = ["Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam",
+      "Baked beans", "Spam", "Spam", "Spam", "Spam", "Spam"]
+
+    # good
+    menu_item = [
+      "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam",
+      "Baked beans", "Spam", "Spam", "Spam", "Spam", "Spam"
+    ]
+
+    # good
+    menu_item =
+      ["Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam", "Spam",
+       "Baked beans", "Spam", "Spam", "Spam", "Spam", "Spam"]
+    ```
+
 * Add underscores to large numeric literals to improve their readability.
 
     ```Ruby
