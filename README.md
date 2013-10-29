@@ -2289,7 +2289,7 @@ this rule only to arrays with two or more elements.
       |  other_method
       |end
     END
-    #=> "def\n  some_method\n  \nother_method\nend"
+    #=> "def test\n  some_method\n  other_method\nend\n"
     ```
 
 ## Regular Expressions
