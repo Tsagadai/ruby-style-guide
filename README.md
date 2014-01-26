@@ -680,7 +680,7 @@ Never use `::` for regular method invocation.
 
     # good
     x = 'test'
-    if !x.nil?
+    unless x.nil?
       # body omitted
     end
     ```
