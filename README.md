@@ -2280,7 +2280,7 @@ this rule only to arrays with two or more elements.
 
 ## Strings
 
-* Prefer string interpolation instead of string concatenation:
+* Prefer string interpolation and string formatting instead of string concatenation:
 
     ```Ruby
     # bad
@@ -2288,6 +2288,9 @@ this rule only to arrays with two or more elements.
 
     # good
     email_with_name = "#{user.name} <#{user.email}>"
+
+    # good
+    email_with_name = format('%s <%s>', user.name, user.email)
     ```
 
 * Consider padding string interpolation code with space. It more clearly sets the
