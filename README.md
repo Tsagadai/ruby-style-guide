@@ -497,6 +497,7 @@ Translations of the guide are available in the following languages:
 * Keep lines up to 80 characters.
 * Limit lines to 80 characters.
 * Avoid trailing whitespace.
+* End each file with a newline.
 * Don't use block comments. They cannot be preceded by whitespace and are not
 as easy to spot as regular comments.
 
