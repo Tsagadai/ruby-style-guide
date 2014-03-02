@@ -1721,7 +1721,7 @@ at all.
       extend SomeModule
       include AnotherModule
 
-      # inner classes 
+      # inner classes
       CustomErrorKlass = Class.new(StandardError)
 
       # constants are next
@@ -1754,12 +1754,12 @@ at all.
     end
     ```
 
-* Don't nest multi line classes within classes. Try to have such nested 
+* Don't nest multi line classes within classes. Try to have such nested
   classes each in their own file in a folder named like the containing class.
 
     ```Ruby
     # bad
-    
+
     # foo.rb
     class Foo
       class Bar
@@ -2662,13 +2662,13 @@ hash rockets syntax.
   can add some useful comments. Just be careful as spaces are ignored.
 
     ```Ruby
-    regexp = %r{
+    regexp = /
       start         # some text
       \s            # white space char
       (group)       # first group
       (?:alt1|alt2) # some alternation
       end
-    }x
+    /x
     ```
 
 * For complex replacements `sub`/`gsub` can be used with block or hash.
