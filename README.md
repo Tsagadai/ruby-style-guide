@@ -1326,7 +1326,7 @@ Translations of the guide are available in the following languages:
   end
 
   # bad
-  something = something ? nil : something.downcase
+  something = something ? something.downcase : nil
 
   # ok
   something = something.downcase if something
