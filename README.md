@@ -2168,7 +2168,7 @@ condition](#safe-assignment-in-condition).
   end
 
   # good
-  module SomeClass
+  module SomeModule
     module_function
 
     def some_method
